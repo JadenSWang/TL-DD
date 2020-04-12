@@ -42,8 +42,8 @@
         </Menu>
 
         <ItemsControl ItemsSource="{Binding Path=Tasks}" Grid.IsSharedSizeScope="True" Width="402"
-                RenderTransformOrigin="0.51,0.509" HorizontalAlignment="Stretch" Height="459" 
-                Canvas.Top="56" Canvas.Left="46" Cursor="Arrow" Background="Gray" x:Name="TaskList"
+                RenderTransformOrigin="0.51,0.509" HorizontalAlignment="Stretch" Height="459" Canvas.Top="56"
+                Canvas.Left="46" Cursor="Arrow" Background="Gray" x:Name="TaskList"
                 materialDesign:ShadowAssist.ShadowDepth="Depth5">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
@@ -52,7 +52,7 @@
                         <materialDesign:Card Background="Gray"
                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Height="55"
                                 Padding="10 10 10 10" materialDesign:ShadowAssist.ShadowDepth="Depth3"
-                                MouseDown="CardItem_Click">
+                                MouseDown="CardItem_Click" MouseEnter="CardItem_MouseEnter" MouseLeave="CardItem_MouseLeave">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition SharedSizeGroup="Checkerz" />

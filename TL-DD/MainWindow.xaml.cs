@@ -18,7 +18,6 @@ namespace TL_DD
 
         public void MainWindow_Load(object sender, EventArgs e)
         {
-
         }
 
         private void PopupBox_OnOpened(object sender, RoutedEventArgs e)
@@ -29,8 +28,19 @@ namespace TL_DD
         {
         }
 
-        private void CardItem_Click(object sender, MouseEventArgs e) {
+        private void CardItem_Click(object sender, MouseEventArgs e)
+        {
             Console.WriteLine("TESTING");
+        }
+
+        private void CardItem_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine("Mouse Entered");
+        }
+
+        private void CardItem_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine("Mouse Left");
         }
 
         #region EventListener Boilerplate
@@ -40,7 +50,6 @@ namespace TL_DD
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
 
         #region Menu Interactions
         private void PinButton_Click(object sender, RoutedEventArgs e)
@@ -57,6 +66,5 @@ namespace TL_DD
             }
         }
         #endregion
-
     }
 }

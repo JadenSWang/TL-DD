@@ -4,6 +4,8 @@ C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\App.g.cs
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD_MarkupCompile.cache
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD_MarkupCompile.lref
+C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.exe
+C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.pdb
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\bin\Debug\TL-DD.exe.config
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\bin\Debug\TL-DD.exe
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\bin\Debug\TL-DD.pdb
@@ -17,5 +19,3 @@ C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.g.resources
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL_DD.Properties.Resources.resources
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.csproj.GenerateResource.cache
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.csproj.CopyComplete
-C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.exe
-C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.pdb
