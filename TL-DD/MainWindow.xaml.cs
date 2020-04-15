@@ -6,6 +6,7 @@ using System.Windows.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using MaterialDesignThemes.Wpf;
 
 namespace TL_DD
 {
@@ -63,6 +64,24 @@ namespace TL_DD
             else
             {
                 this.Topmost = false;
+            }
+        }
+        #endregion
+
+        #region Clock Dialogue
+        public void CombinedDialogOpenedEventHandler(object sender, DialogOpenedEventArgs eventArgs)
+        {
+            CombinedCalendar.SelectedDate = ((PickersViewModel)DataContext).Date;
+            CombinedClock.Time = ((PickersViewModel)DataContext).Time;
+        }
+
+        public void CombinedDialogClosingEventHandler(object sender, DialogClosingEventArgs eventArgs)
+        {
+            if (Equals(eventArgs.Parameter, "1"))
+            {
+                var combined = CombinedCalendar.SelectedDate.Value.AddSeconds(CombinedClock.Time.TimeOfDay.TotalSeconds);
+                ((PickersViewModel)DataContext).Time = combined;
+                ((PickersViewModel)DataContext).Date = combined;
             }
         }
         #endregion

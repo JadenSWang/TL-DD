@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:local="clr-namespace:TL_DD"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}" Height="642.683" Width="500"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}" Height="667.683" Width="512"
         ResizeMode="CanMinimize" Loaded="MainWindow_Load">
     <Window.Resources>
         <ResourceDictionary>
@@ -26,7 +26,7 @@
         <local:TaskListManager />
     </Window.DataContext>
 
-    <Canvas RenderTransformOrigin="0.474,0.515" x:Name="Canvas" Background="#292929" Margin="0,0,-6,0">
+    <Canvas RenderTransformOrigin="0.474,0.515" x:Name="Canvas" Background="#292929" Margin="0,0,0,-1" Width="506">
         <Menu IsMainMenu="True" Width="17" Height="17" Canvas.Left="422" Canvas.Top="21" Background="#3F3F3F">
             <MenuItem x:Name="MainMenu" Header="" Width="17" Height="17" RenderTransformOrigin="0.588,-0.765">
                 <MenuItem Header="Add Task">
@@ -41,7 +41,7 @@
             </MenuItem>
         </Menu>
 
-        <ItemsControl ItemsSource="{Binding Path=Tasks}" Grid.IsSharedSizeScope="True" Width="402"
+        <ItemsControl ItemsSource="{Binding Path=Tasks}" Grid.IsSharedSizeScope="True" Width="396"
                 RenderTransformOrigin="0.51,0.509" HorizontalAlignment="Stretch" Height="459" Canvas.Top="56"
                 Canvas.Left="46" Cursor="Arrow" Background="Gray" x:Name="TaskList"
                 materialDesign:ShadowAssist.ShadowDepth="Depth5">
@@ -52,7 +52,8 @@
                         <materialDesign:Card Background="Gray"
                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Height="55"
                                 Padding="10 10 10 10" materialDesign:ShadowAssist.ShadowDepth="Depth3"
-                                MouseDown="CardItem_Click" MouseEnter="CardItem_MouseEnter" MouseLeave="CardItem_MouseLeave">
+                                MouseDown="CardItem_Click" MouseEnter="CardItem_MouseEnter"
+                                MouseLeave="CardItem_MouseLeave">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition SharedSizeGroup="Checkerz" />
@@ -77,5 +78,37 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        <Canvas Height="70" Canvas.Left="46" Canvas.Top="530" Width="396" Background="Gray">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Date, StringFormat={}{0:yyyy-MM-dd HH:mm:ss}}" VerticalAlignment="Center"
+                        FontSize="24" />
+            </StackPanel>
+            <Button Content="..." Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    materialDesign:DialogHost.DialogOpenedAttached="CombinedDialogOpenedEventHandler"
+                    materialDesign:DialogHost.DialogClosingAttached="CombinedDialogClosingEventHandler"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth5" Canvas.Left="353" Canvas.Top="16" Height="40"
+                    Width="40" Background="#FF382D2D" BorderBrush="#80808080">
+                <Button.CommandParameter>
+                    <Grid Margin="-1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Orientation="Horizontal">
+                            <Calendar x:Name="CombinedCalendar" Margin="-1 -4 -1 0" />
+                            <materialDesign:Clock x:Name="CombinedClock" DisplayAutomation="CycleWithSeconds"
+                                    Is24Hours="True" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Margin="8" HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                    CommandParameter="0" Style="{DynamicResource MaterialDesignFlatButton}"
+                                    Content="CANCEL" />
+                            <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                    CommandParameter="1" Style="{DynamicResource MaterialDesignFlatButton}" Content="OK" />
+                        </StackPanel>
+                    </Grid>
+                </Button.CommandParameter>
+            </Button>
+        </Canvas>
     </Canvas>
 </Window>

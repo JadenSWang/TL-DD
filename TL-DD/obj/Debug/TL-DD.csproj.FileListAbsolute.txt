@@ -19,3 +19,4 @@ C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.g.resources
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL_DD.Properties.Resources.resources
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.csproj.GenerateResource.cache
 C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.csproj.CopyComplete
+C:\Users\mathj\Documents\Code\C#\TL-DD\TL-DD\obj\Debug\TL-DD.csprojAssemblyReference.cache
